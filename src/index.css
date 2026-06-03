@@ -1,0 +1,208 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --input-bg: #0f172a;
+  --input-border: #334155;
+  --error: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+.background-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(15,23,42,0) 70%);
+  top: -200px;
+  left: -200px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.background-glow.bottom-right {
+  top: auto;
+  left: auto;
+  bottom: -200px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(15,23,42,0) 70%);
+}
+
+.login-container {
+  background-color: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 10;
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.login-header p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.toggle-password:hover {
+  color: var(--text-main);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0.75rem;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.form-control.has-right-icon {
+  padding-right: 2.75rem;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.login-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.success-message {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}

@@ -1,0 +1,236 @@
+/* viewTasks.css - Raw Utility Brutalism Style */
+.brutal-task-body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(0,0,0,0.05) 2px, transparent 2px),
+    linear-gradient(-45deg, rgba(0,0,0,0.05) 2px, transparent 2px);
+  background-size: 20px 20px;
+  background-position: center;
+}
+
+.brutal-task-container {
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 15px 15px 0px #000000;
+}
+
+.brutal-task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #000000;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brutal-task-header h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.brutal-nav-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: 4px solid #000000;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.brutal-nav-btn:hover {
+  background-color: #0000ff;
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0px #0000ff;
+}
+
+.brutal-section-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  border-bottom: 4px dashed #000000;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.brutal-table-wrapper {
+  overflow-x: auto;
+  border: 4px solid #000000;
+}
+
+.brutal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Space Mono', monospace;
+}
+
+.brutal-table th, .brutal-table td {
+  border: 2px solid #000000;
+  padding: 10px;
+  text-align: left;
+}
+
+.brutal-table th {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.brutal-table tr {
+  background-color: #ffffff;
+}
+
+.brutal-3dot-btn {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 0px 8px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.brutal-3dot-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.brutal-btn-small {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.brutal-btn-small:hover:not(:disabled) {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.brutal-btn-small.confirm-yes:hover:not(:disabled) {
+  background-color: #00a000;
+}
+
+.brutal-btn-small.confirm-no:hover:not(:disabled) {
+  background-color: #ff0000;
+}
+
+.brutal-btn-small:disabled {
+  background-color: #e5e5e5;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* ADD TASK FORM STYLES */
+.brutal-add-form {
+  border: 4px solid #000000;
+  padding: 20px;
+  background-color: #ffff00;
+  margin-bottom: 30px;
+  box-shadow: 10px 10px 0px #000000;
+}
+
+.brutal-add-form h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 4px solid #000;
+  padding-bottom: 10px;
+}
+
+.brutal-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.brutal-input-group {
+  margin-bottom: 15px;
+}
+
+.brutal-input {
+  width: 100%;
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.brutal-input:focus {
+  background-color: #0000ff;
+  color: #ffffff;
+}
+
+.brutal-button {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: 4px solid #000000;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.brutal-button:hover:not(:disabled) {
+  background-color: #ff0000;
+  color: #ffffff;
+  transform: translate(-5px, -5px);
+  box-shadow: 10px 10px 0px #0000ff;
+}
+
+.brutal-button:active:not(:disabled) {
+  transform: translate(0, 0);
+  box-shadow: 5px 5px 0px #0000ff;
+}
+
+.brutal-button:disabled {
+  background-color: #888888;
+  cursor: not-allowed;
+}
+
+.brutal-action-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 4px solid #000000;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.brutal-action-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}

@@ -1,0 +1,172 @@
+/* loginPage.css - Raw Utility Brutalism Style */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.brutal-body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  background-image: 
+    linear-gradient(45deg, #e5e5e5 25%, transparent 25%),
+    linear-gradient(-45deg, #e5e5e5 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e5e5e5 75%),
+    linear-gradient(-45deg, transparent 75%, #e5e5e5 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.brutal-container {
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 15px 15px 0px #000000;
+  position: relative;
+}
+
+.brutal-header {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  border-bottom: 4px solid #000000;
+  padding-bottom: 10px;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.brutal-label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.brutal-input-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.brutal-input {
+  width: 100%;
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.brutal-input:focus {
+  background-color: #0000ff;
+  color: #ffffff;
+}
+
+.brutal-input::placeholder {
+  color: #a0a0a0;
+}
+
+.brutal-input:focus::placeholder {
+  color: #ffffff;
+}
+
+.brutal-toggle {
+  position: absolute;
+  right: 10px;
+  top: 42px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.brutal-toggle:hover {
+  background: #ff0000;
+}
+
+.brutal-button {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: 4px solid #000000;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.brutal-button:hover:not(:disabled) {
+  background-color: #ff0000;
+  color: #ffffff;
+  transform: translate(-5px, -5px);
+  box-shadow: 10px 10px 0px #0000ff;
+}
+
+.brutal-button:active:not(:disabled) {
+  transform: translate(0, 0);
+  box-shadow: 5px 5px 0px #0000ff;
+}
+
+.brutal-button:disabled {
+  background-color: #888888;
+  cursor: not-allowed;
+}
+
+.brutal-alert {
+  border: 4px solid #000000;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.brutal-alert.error {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.brutal-alert.success {
+  background-color: #00ff00;
+  color: #000000;
+}
+
+.brutal-footer {
+  margin-top: 30px;
+  border-top: 4px solid #000000;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.brutal-footer a {
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 2px 5px;
+  border: 2px solid #000000;
+  display: inline-block;
+}
+
+.brutal-footer a:hover {
+  background-color: #0000ff;
+  color: #ffffff;
+}
