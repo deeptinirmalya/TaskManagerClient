@@ -3,7 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../styles/liveTracking.css';
+import config from '../config';
 import { BASE_API_URL } from '../config';
+import { getItemWithExpiry } from './loginPage';
 import L from 'leaflet';
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -24,8 +26,10 @@ const LiveTracking = () => {
 
     const createSession = async () => {
         try {
-            const token = localStorage.getItem("token");
-            const headers = {};
+            const token = getItemWithExpiry('authToken');
+            const headers = {
+                'Content-Type': 'application/json'
+            };
             if (token) headers['Authorization'] = `Bearer ${token}`;
 
             const res = await fetch(`${BASE_API_URL}/tracking/create`, {
