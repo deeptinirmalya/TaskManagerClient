@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../styles/liveTracking.css';
-import config from '../config';
 import { BASE_API_URL } from '../config';
 import { getItemWithExpiry } from './loginPage';
 import L from 'leaflet';
