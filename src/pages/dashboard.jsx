@@ -76,7 +76,7 @@ export default function Dashboard() {
           <div className="brutal-button-stack">
             <button className="brutal-action-btn" onClick={() => navigate('/view-expenses')}>ACTION [01]: VIEW_EXPENSES</button>
             <button className="brutal-action-btn" onClick={() => navigate('/view-tasks')}>ACTION [02]: VIEW_TASKS</button>
-            <button className="brutal-action-btn">ACTION [03]: FLUSH_CACHE</button>
+            <button className="brutal-action-btn" onClick={() => navigate('/tracking')}>ACTION [03]: LIVE_TRACKING</button>
             <button className="brutal-action-btn">ACTION [04]: MANAGE_USERS</button>
             <button className="brutal-action-btn">ACTION [05]: SYSTEM_SETTINGS</button>
           </div>
