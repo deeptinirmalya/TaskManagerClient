@@ -1,0 +1,49 @@
+.tracking-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.tracking-starter {
+    padding: 2rem;
+    text-align: center;
+    border: 3px solid black;
+    box-shadow: 6px 6px 0px black;
+    background-color: white;
+}
+
+.live-tracking-page {
+    padding: 20px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ffd700;
+    border: 3px solid black;
+    box-shadow: 4px 4px 0px black;
+}
+
+.tracking-header h2 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.map-container-wrapper {
+    flex-grow: 1;
+    border: 3px solid black;
+    box-shadow: 8px 8px 0px black;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.leaflet-container {
+    background-color: #e5e5e5;
+}
