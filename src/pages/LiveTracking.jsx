@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../styles/liveTracking.css';
-import config from '../config';
+import { BASE_API_URL } from '../config';
 import L from 'leaflet';
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -28,7 +28,7 @@ const LiveTracking = () => {
             const headers = {};
             if (token) headers['Authorization'] = `Bearer ${token}`;
 
-            const res = await fetch(`${config.API_BASE_URL}/api/tracking/create`, {
+            const res = await fetch(`${BASE_API_URL}/tracking/create`, {
                 method: 'POST',
                 headers: headers,
                 credentials: 'include'
@@ -46,8 +46,8 @@ const LiveTracking = () => {
         if (!sessionId) return;
 
         const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const wsHost = config.API_BASE_URL.replace(/^https?:\/\//, ''); 
-        const wsUrl = `${wsProtocol}//${wsHost}/api/tracking/ws/${sessionId}`;
+        const wsHostPath = BASE_API_URL.replace(/^https?:\/\//, ''); 
+        const wsUrl = `${wsProtocol}//${wsHostPath}/tracking/ws/${sessionId}`;
 
         wsRef.current = new WebSocket(wsUrl);
 
